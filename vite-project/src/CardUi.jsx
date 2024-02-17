@@ -12,7 +12,7 @@ import {
 const CardUi = () => {
   return (
     <Box maxW="sm" mx="auto" p={6} rounded="md" boxShadow="lg" bg="white">
-      <Heading as="h3" size="lg" textAlign="center" mb={6}>
+      <Heading as="h3" size="lg" textAlign="left" mb={6}>
         Create a new event
       </Heading>
       <VStack spacing={4}>

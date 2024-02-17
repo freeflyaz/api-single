@@ -1,21 +1,18 @@
 import React from 'react';
 import Card from './Card'; // Adjust the import path to where your Card component is located
-import { ChakraProvider, Box, Text, Button, VStack } from '@chakra-ui/react';
+import { ChakraProvider} from '@chakra-ui/react';
 import CardUi from './CardUi';
+import EventDateCard from './EventDateCard';
+import EventForm from './EventForm';
+
 const App = () => {
   return (
     <div className="App">
-      <Card />
-      <CardUi />
+      {/* <Card /> */}
       <ChakraProvider>
-        <Box textAlign="center" fontSize="xl" p={5}>
-          <VStack spacing={8}>
-            <Text>Welcome to Chakra UI</Text>
-            <Button colorScheme="teal" size="lg">
-              Click me
-            </Button>
-          </VStack>
-        </Box>
+      <EventDateCard />
+        <CardUi />
+        <EventForm />
       </ChakraProvider>
     </div>
   );
