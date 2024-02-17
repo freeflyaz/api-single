@@ -15,9 +15,6 @@ const EventForm = () => {
   // For a more dynamic approach, these icons can be replaced with actual Chakra UI icons
   const iconPlaceholder = ''; // Placeholder for actual icons
 
-
-
-  
   return (
     <Box
       bg={useColorModeValue('white', 'gray.700')}
@@ -51,6 +48,7 @@ const EventForm = () => {
             <option>Nigeria</option>
           </Select>
         </FormControl>
+        <div className="mt-4 bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded w-full text-center"><button>Button</button> </div>
         <Button
           width="full"
           mt={4}
