@@ -1,12 +1,12 @@
-import './App.css'
+import React from 'react';
+import Card from './Card'; // Adjust the import path to where your Card component is located
 
-function App() {
-
+const App = () => {
   return (
-<h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
+    <div className="App">
+      <Card />
+    </div>
+  );
+};
 
-export default App
+export default App;
