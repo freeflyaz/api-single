@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "flag-icon-css": "^4.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
