@@ -1,8 +1,8 @@
 import Learning from './Learning';
 
-const List = () => {
+const List = ({eventList}) => {
   return (
-    <Learning />
+    <Learning eventList={eventList} />
 )
   };
 export default List;
