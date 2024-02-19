@@ -11,7 +11,7 @@ async function fetchTextFromDatabase() {
   return 'This text needs to be translated';
 }
 
-app.get('/page-content', async (req, res) => {
+app.get('/', async (req, res) => {
   const userLanguage = req.query.lang || 'en'; // You could determine this based on user preference
   const originalText = await fetchTextFromDatabase();
 
