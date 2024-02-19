@@ -1,13 +1,11 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import LanguageSelector from './components/LanguageSelector';
-import List from './components/List';
+import Container from './components/Container';
 
 const App = () => {
   return (
     <div className="App">
       <ChakraProvider>
-        <LanguageSelector />
-        <List />
+        <Container />
       </ChakraProvider>
     </div>
   );
