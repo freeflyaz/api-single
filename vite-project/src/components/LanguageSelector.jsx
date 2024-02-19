@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 // Make sure you import the flag-icon-css library in your project entry file
 // import 'flag-icon-css/css/flag-icon.min.css';
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ onLanguageChange }) => {
   const [selectedLanguage, setSelectedLanguage] = useState('de');
 
   const languageLabels = {
@@ -22,8 +22,9 @@ const LanguageSelector = () => {
     // Add more flags here
   };
 
-  const onLanguageChange = (lang) => {
+  const handleLanguageChange = (lang) => {
     setSelectedLanguage(lang);
+    onLanguageChange(lang); // Notify parent component
   };
 
   return (
