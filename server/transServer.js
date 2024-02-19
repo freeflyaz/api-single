@@ -8,6 +8,7 @@ app.use(express.json());
 // Mock function to simulate fetching text from a database
 async function fetchTextFromDatabase() {
   // Replace this with your actual database fetch logic
+  
   return 'This text needs to be translated';
 }
 
