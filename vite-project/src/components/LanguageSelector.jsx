@@ -1,25 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
+// Make sure you import the flag-icon-css library in your project entry file
 // import 'flag-icon-css/css/flag-icon.min.css';
 
-const LanguageSelector = ({ onLanguageChange }) => {
+const LanguageSelector = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState('de');
+
+  const languageLabels = {
+    en: 'English',
+    de: 'Deutsch',
+    es: 'Español',
+    // Add more languages here
+  };
+
+  // Adjust the flag codes as necessary
+  const languageFlags = {
+    en: 'gb', // ISO 3166-1 alpha-2 code for the United Kingdom
+    de: 'de', // Germany
+    es: 'es', // Spain
+    // Add more flags here
+  };
+
+  const onLanguageChange = (lang) => {
+    setSelectedLanguage(lang);
+  };
+
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-      <span className="flag-icon flag-icon-us mr-2"></span>English
+        <span className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} mr-2`}></span>
+        {languageLabels[selectedLanguage]}
       </MenuButton>
       <MenuList>
-        {/* <MenuItem onClick={() => onLanguageChange('en')} >
-          <span className="flag-icon flag-icon-us mr-2"></span>English
-        </MenuItem> */}
-        <MenuItem onClick={() => onLanguageChange('de')}>
-          <span className="flag-icon flag-icon-de mr-2"></span> Deutsch
-        </MenuItem>
-        <MenuItem onClick={() => onLanguageChange('es')}>
-          <span className="flag-icon flag-icon-es mr-2"></span> Español
-        </MenuItem>
-        {/* Add more languages as needed */}
+        {Object.entries(languageLabels).map(([langCode, label]) => (
+          <MenuItem key={langCode} onClick={() => onLanguageChange(langCode)}>
+            <span className={`flag-icon flag-icon-${languageFlags[langCode]} mr-2`}></span>
+            {label}
+          </MenuItem>
+        ))}
       </MenuList>
     </Menu>
   );
