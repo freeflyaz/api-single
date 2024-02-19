@@ -7,7 +7,7 @@ const  getTopics = async (req, res) => {
     const sendBack = await model.getTopics(id);
     res.send(sendBack);
   } catch (error) {
-    console.log('here', error);
+    console.log('error', error);
     // If an error occurs, send a 500 Internal Server Error response
     res.status(500).send('An error occurred while fetching topics');
   }
