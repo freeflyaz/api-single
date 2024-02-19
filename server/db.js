@@ -11,7 +11,7 @@ async function main () {
 const topicSchema = new mongoose.Schema({
   // _id: String,
   order: Number,
-  question: String,
+  name: String,
   answerA: String,
   answerB: String,
   answerC: String,
