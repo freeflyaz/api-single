@@ -17,9 +17,9 @@ const Learning = ({eventList}) => {
 
       {eventList.name}
     <div className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full text-left"><button>{eventList.answerA}</button> </div>
-    <div className="mt-4 bg-gray-100 font-bold py-2 px-4 rounded w-full text-left"><button>answerB</button> </div>
-    <div className="mt-4 bg-gray-100 font-bold py-2 px-4 rounded w-full text-left"><button>answerC</button> </div>
-    <div className="mt-4 bg-gray-100 font-bold py-2 px-4 rounded w-full text-left"><button>answerD</button> </div>     
+    <div className="mt-4 bg-gray-100 font-bold py-2 px-4 rounded w-full text-left"><button>{eventList.answerB}</button> </div>
+    <div className="mt-4 bg-gray-100 font-bold py-2 px-4 rounded w-full text-left"><button>{eventList.answerC}</button> </div>
+    <div className="mt-4 bg-gray-100 font-bold py-2 px-4 rounded w-full text-left"><button>{eventList.answerD}</button> </div>     
   </Box>
 )
   };
