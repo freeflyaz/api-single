@@ -7,7 +7,8 @@ const Container = () => {
   const [eventList, setEventList] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState('de');
   const [currentQuestionId, setCurrentQuestionId] = useState(1); // Starting with question 1
-  const [isFlipped, setIsFlipped] = useState(false);
+ 
+  // const [isFlipped, setIsFlipped] = useState(false);
   const [lastSelectedLanguage, setLastSelectedLanguage] = useState(null); // Track the last selected non-German language
 
   async function getQuestions() {
@@ -21,9 +22,9 @@ useEffect(() => {
 }, [selectedLanguage, currentQuestionId]);
 
 const handleLanguageChange = (lang) => {
-  if (lang !== 'de') setLastSelectedLanguage(lang); // Update the last selected non-German language
+  if (lang !== 'de') setLastSelectedLanguage(lang); // Update the last selected non-German language for flipping 
   setSelectedLanguage(lang);
-  setIsFlipped(false); // Reset flip state when language is changed manually
+  // setIsFlipped(false); // Reset flip state when language is changed manually
 };
 
 function nextQuestion() {
@@ -35,9 +36,10 @@ function prevQuestion() {
 }
 
 const flip = () => {
-  setIsFlipped(!isFlipped);
-  if (!isFlipped) {
-    // If not already flipped, flip to German and save the last selected language
+  //setIsFlipped(!isFlipped);
+  // if (isFlipped === false) {
+  if (selectedLanguage !== 'de') {
+  // If not already flipped, flip to German and save the last selected language
     setLastSelectedLanguage(selectedLanguage);
     setSelectedLanguage('de');
   } else {
