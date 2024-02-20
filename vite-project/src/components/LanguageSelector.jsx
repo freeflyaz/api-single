@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 // import 'flag-icon-css/css/flag-icon.min.css';
 
 const LanguageSelector = ({ onLanguageChange }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState('de');
+  // const [selectedLanguage, setSelectedLanguage] = useState('de');
 
   const languageLabels = {
     en: 'English',
@@ -20,7 +20,7 @@ const LanguageSelector = ({ onLanguageChange }) => {
 
   // Adjust the flag codes as necessary
   const languageFlags = {
-    en: 'gb', // ISO 3166-1 alpha-2 code for the United Kingdom
+    en: 'us', // ISO 3166-1 alpha-2 code for the United Kingdom
     de: 'de', // Germany
     es: 'es', // Spain
     tk: 'tr', // Turkey
@@ -31,9 +31,9 @@ const LanguageSelector = ({ onLanguageChange }) => {
     // Add more flags here
   };
 
-  const handleLanguageChange = (lang) => {
-    onLanguageChange(lang); // Notify parent component
-  };
+  // const handleLanguageChange = (lang) => {
+  //   onLanguageChange(lang); // Notify parent component
+  // };
 
   return (
     <Menu>
