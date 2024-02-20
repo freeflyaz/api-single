@@ -17,6 +17,7 @@ useEffect(() => {
 }, [selectedLanguage]);
 
 const handleLanguageChange = (lang) => {
+  alert(`http://localhost:3000/q/1?lang=${selectedLanguage}`);
   setSelectedLanguage(lang);
 };
 

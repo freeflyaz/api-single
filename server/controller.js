@@ -29,12 +29,12 @@ async function translateText(text, targetLanguage) {
 const getTopics = async (req, res) => {
   try {
     const { id } = req.params; // Extract the id from request parameters
-    const userLanguage = req.query.lang || 'en'; // Default to English if no query parameter
+    const userLanguage = req.query.lang || 'de'; // Default to English if no query parameter
     
     const sendBack = await model.getTopics(id);
     // Check if translation is needed
     console.log('sendBack',sendBack);
-    if (userLanguage !== 'en') {
+    if (userLanguage !== 'de') {
       // Assuming sendBack is an object with text fields you want to translate
       const textsToTranslate = [
         sendBack.name,

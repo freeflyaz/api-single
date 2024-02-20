@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 // import 'flag-icon-css/css/flag-icon.min.css';
 
 const LanguageSelector = ({ onLanguageChange }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState('de');
+  // const [selectedLanguage, setSelectedLanguage] = useState('de');
 
   const languageLabels = {
     en: 'English',
@@ -22,16 +22,17 @@ const LanguageSelector = ({ onLanguageChange }) => {
     // Add more flags here
   };
 
-  const handleLanguageChange = (lang) => {
-    setSelectedLanguage(lang);
-    onLanguageChange(lang); // Notify parent component
-  };
+  // const handleLanguageChange = (lang) => {
+   
+  //   setSelectedLanguage(lang);
+  //   onLanguageChange(lang); // Notify parent component
+  // };
 
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-        <span className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} mr-2`}></span>
-        {languageLabels[selectedLanguage]}
+        {/* <span className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} mr-2`}></span>
+        {languageLabels[selectedLanguage]} */}
       </MenuButton>
       <MenuList>
         {Object.entries(languageLabels).map(([langCode, label]) => (
