@@ -105,29 +105,22 @@ const Container = () => {
       mx="auto"
     >
       <List eventList={eventList} />
-      <div className="p-4">
-      {/* <Button colorScheme="green" onClick={() => prevQuestion()}>
-          Prev
-        </Button> */}
-        {/* <VscReply /> */}
-        <div style={{width:100, height: 100}}>
-          <PiArrowBendUpLeft style={{fontSize:24}} className="arrow-left"/>
-         
-          <div className="left-right" > 
-         
-            <div className={`flag-icon flag-icon-${languageFlags['en']} mr-2 flag-right`} style={{fontSize:24}} ></div>
-          
-      
-            <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} mr-2 flag-left`} style={{fontSize:24}}></div>
-          </div>
-          <PiArrowBendDownRight style={{fontSize:24}} className="arrow-right" />
-        </div>
+      <div className="nav-bottom">
+      <Button colorScheme="green" onClick={() => prevQuestion()}>Prev</Button>
+      {/* <button className="round-button" >
+  +
+</button> */}
 
-        {/* <Button colorScheme="green" onClick={() => nextQuestion()}>
-          Next
-        </Button> */}
-        </div>
 
+
+      <PiArrowBendUpLeft style={{fontSize:20}} className="arrow-left"/>
+      <div className="left-right" onClick={() => flip()} > 
+        <div className={`flag-icon flag-icon-${languageFlags['en']} mr-2 flag-right`} style={{fontSize:24}} ></div>
+        <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} mr-2 flag-left`} style={{fontSize:24}}></div>
+      </div>
+      <PiArrowBendDownRight style={{fontSize:20}} className="arrow-right" />
+      <Button colorScheme="green" onClick={() => nextQuestion()}>Next </Button>
+      </div>
       </Box>
       
 
@@ -141,9 +134,7 @@ const Container = () => {
             className={`flag-icon flag-icon-${languageFlags[selectedFlag]} mr-2`}
           ></span>
         </Button>
-        <Button colorScheme="green" onClick={() => nextQuestion()}>
-          Next
-        </Button>
+       
       </div>
     </div>
   );

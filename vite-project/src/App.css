@@ -12,16 +12,35 @@
  .left-right {
 display: flex;
 flex-direction: row;
+padding-top: 15px;
 
  }
-
- 
  .arrow-left {
 
-   transform: translate(50px, 0px);
-   
+  transform: translate(105px,-15px);
 }
 .arrow-right {
-  transform: translate(11px, -10px);
+  transform: translate(-100px, 17px);
+}
 
+.nav-bottom {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space between the main items */
+  padding-top: 16px; /* Padding around the nav bar */
+}
+
+.round-button {
+  width: 50px; /* Set the width of the button */
+  height: 50px; /* Set the height of the button */
+  border-radius: 50%; /* This makes it round */
+  border: none; /* Remove the border if there is one */
+  color: white; /* Set the text color */
+  background-color: #007bff; /* Set the background color */
+  text-align: center; /* Align the text in the center */
+  line-height: 50px; /* Center the text vertically */
+  display: inline-block; /* Allows the use of line-height for vertical centering */
+  cursor: pointer; /* Change mouse cursor to pointer on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow */
+  /* Add more styles if needed */
 }
