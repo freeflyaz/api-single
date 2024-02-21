@@ -2,7 +2,6 @@ import List from './List';
 import LanguageSelector from './LanguageSelector';
 import { Flex, Box, Button, useColorModeValue } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
-import { VscReply } from "react-icons/vsc";
 import { PiArrowBendUpLeft, PiArrowBendDownRight  } from "react-icons/pi";
 import '../App.css';
 
@@ -113,27 +112,27 @@ const Container = () => {
 
 
 
-      <PiArrowBendUpLeft style={{fontSize:20}} className="arrow-left"/>
-      <div className="left-right" onClick={() => flip()} > 
-        <div className={`flag-icon flag-icon-${languageFlags['en']} mr-2 flag-right`} style={{fontSize:24}} ></div>
-        <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} mr-2 flag-left`} style={{fontSize:24}}></div>
-      </div>
-      <PiArrowBendDownRight style={{fontSize:20}} className="arrow-right" />
-      <Button colorScheme="green" onClick={() => nextQuestion()}>Next </Button>
+<button className="round-button" onClick={() => flip()}>
+    <PiArrowBendUpLeft className="arrow-icon arrow-left"/>
+    <div className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} flag-right`}></div>
+    <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} flag-left`}></div>
+    <PiArrowBendDownRight className="arrow-icon arrow-right"/>
+  </button>
+  <Button colorScheme="green" onClick={() => nextQuestion()}>Next</Button>
       </div>
       </Box>
       
 
-      <div className="text-center">
+      <div className="text-center p-6">
         
       <span>{currentQuestionId} of 301</span>
 
-        <Button colorScheme="green" onClick={() => flip()}>
+        {/* <Button colorScheme="green" onClick={() => flip()}>
           show me in: 
           <span
             className={`flag-icon flag-icon-${languageFlags[selectedFlag]} mr-2`}
           ></span>
-        </Button>
+        </Button> */}
        
       </div>
     </div>

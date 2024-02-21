@@ -1,13 +1,13 @@
-.flag-right {
+/* .flag-right {
  display: flex;
  justify-content: flex-end;
-}
+} */
 
-.flag-right {
+/* .flag-right {
   display: flex;
   justify-content: flex-start;
-  transform: translate(45%, -45%); /* Move it down and to the right */
- }
+  transform: translate(45%, -45%); 
+ } */
 
  .left-right {
 display: flex;
@@ -15,13 +15,13 @@ flex-direction: row;
 padding-top: 15px;
 
  }
- .arrow-left {
+ /* .arrow-left {
 
   transform: translate(105px,-15px);
 }
 .arrow-right {
   transform: translate(-100px, 17px);
-}
+} */
 
 .nav-bottom {
   display: flex;
@@ -31,16 +31,55 @@ padding-top: 15px;
 }
 
 .round-button {
-  width: 50px; /* Set the width of the button */
-  height: 50px; /* Set the height of the button */
-  border-radius: 50%; /* This makes it round */
-  border: none; /* Remove the border if there is one */
-  color: white; /* Set the text color */
-  background-color: #007bff; /* Set the background color */
-  text-align: center; /* Align the text in the center */
-  line-height: 50px; /* Center the text vertically */
-  display: inline-block; /* Allows the use of line-height for vertical centering */
-  cursor: pointer; /* Change mouse cursor to pointer on hover */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow */
-  /* Add more styles if needed */
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #d8dee3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Small shadow */
+  transition: background-color 0.3s; /* Smooth transition for the hover effect */
+  border: #325d36 solid;
 }
+
+.round-button:hover {
+  background-color: #e7ecf1; /* Change background color on hover */
+}
+
+
+.round-button .flag-icon, .arrow-icon {
+  position: absolute; /* Absolutely position the icons inside the button */
+  font-size: 24px; /* Set the size of the icons */
+}
+
+.round-button .arrow-left, .arrow-right {
+  font-size: 20px; /* Adjust the size of your arrows */
+  /* Remove any transforms if they were used to position these elements */
+}
+/* .flag-right {
+ display: flex;
+ justify-content: flex-end;
+}  */
+
+ .flag-right {
+  top:30px;
+  left:20px;
+ }
+ .flag-left {
+  bottom:30px;
+  right:20px
+ }
+
+ .arrow-left {
+
+  transform: translate(20px,-15px);
+}
+.arrow-right {
+  transform: translate(-20px, 17px);
+}
+
+
+/* Additional styles for other elements */

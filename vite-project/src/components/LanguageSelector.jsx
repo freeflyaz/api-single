@@ -57,7 +57,7 @@ const LanguageSelector = ({ onLanguageChange }) => {
       <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
         {/* <span className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} mr-2`}></span>
         {languageLabels[selectedLanguage]} */}
-        Your home Language
+        Select Mother Tongue
       </MenuButton>
       <MenuList>
         {Object.entries(languageLabels).map(([langCode, label]) => (
