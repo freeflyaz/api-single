@@ -1,7 +1,11 @@
 import List from './List';
 import LanguageSelector from './LanguageSelector';
-import { Flex, Box, Button } from '@chakra-ui/react';
+import { Flex, Box, Button, useColorModeValue } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
+import { VscReply } from "react-icons/vsc";
+import { PiArrowBendUpLeft, PiArrowBendDownRight  } from "react-icons/pi";
+import '../App.css';
+
 
 const Container = () => {
   const [eventList, setEventList] = useState([]);
@@ -62,16 +66,25 @@ const Container = () => {
   };
 
   const languageFlags = {
-    en: 'us', // ISO 3166-1 alpha-2 code for the United Kingdom
-    de: 'de', // Germany
-    es: 'es', // Spain
-    tk: 'tr', // Turkey
-    el: 'gr',
-    ja: 'jp', // Japan
-    zh: 'cn'
-
-    // Add more flags here
+    ar: 'sy', // Assuming Arabic for Syria
+    fa: 'ir', // Persian for Iran
+    ps: 'af', // Pashto for Afghanistan, also fa (Dari) is spoken here
+    tr: 'tr', // Turkish for Turkey
+    en: 'us', // English, using United States as the reference for the English language flag
+    so: 'so', // Somali for Somalia
+    ti: 'er', // Tigrinya for Eritrea
+    ur: 'pk', // Urdu for Pakistan
+    am: 'et', // Amharic for Ethiopia
+    bn: 'bd', // Bengali for Bangladesh
+    ru: 'ru', // Russian for Russia
+    sq: 'al', // Albanian for Albania
+    uk: 'ua', // Ukrainian for Ukraine
+    sr: 'rs', // Serbian for Serbia
+    de: 'de'
+    // Kosovo uses 'xk', a user-assigned code not officially ISO 3166-1
   };
+  
+  
 
   return (
     <div className="Container">
@@ -81,13 +94,46 @@ const Container = () => {
           <LanguageSelector onLanguageChange={handleLanguageChange} />
         </Box>
       </Flex>
+
+      <Box
+      bg={useColorModeValue('white', 'gray.700')}
+      p={8}
+      maxW="md"
+      borderWidth={1}
+      borderRadius={8}
+      boxShadow="lg"
+      mx="auto"
+    >
       <List eventList={eventList} />
+      <div className="p-4">
+      {/* <Button colorScheme="green" onClick={() => prevQuestion()}>
+          Prev
+        </Button> */}
+        {/* <VscReply /> */}
+        <div style={{width:100, height: 100}}>
+          <PiArrowBendUpLeft style={{fontSize:24}} className="arrow-left"/>
+         
+          <div className="left-right" > 
+         
+            <div className={`flag-icon flag-icon-${languageFlags['en']} mr-2 flag-right`} style={{fontSize:24}} ></div>
+          
+      
+            <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} mr-2 flag-left`} style={{fontSize:24}}></div>
+          </div>
+          <PiArrowBendDownRight style={{fontSize:24}} className="arrow-right" />
+        </div>
+
+        {/* <Button colorScheme="green" onClick={() => nextQuestion()}>
+          Next
+        </Button> */}
+        </div>
+
+      </Box>
+      
 
       <div className="text-center">
-        <Button colorScheme="green" onClick={() => prevQuestion()}>
-          Prev
-        </Button>
-        <span style={{ padding: '125px' }}>{currentQuestionId} of 301</span>
+        
+      <span>{currentQuestionId} of 301</span>
 
         <Button colorScheme="green" onClick={() => flip()}>
           show me in: 

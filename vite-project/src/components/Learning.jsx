@@ -11,18 +11,7 @@ const Learning = ({ eventList }) => {
   };
 
   return (
-    <Box
-      bg={useColorModeValue('white', 'gray.700')}
-      p={8}
-      maxW="md"
-      borderWidth={1}
-      borderRadius={8}
-      boxShadow="lg"
-      mx="auto"
-    >
-      <Heading as="h2" size="lg" textAlign="center" mb={6}>
-        Learning German Culture
-      </Heading>
+    <>
 
       {eventList.name}
       <button className={answerButtonStyle('answerA')}>
@@ -37,7 +26,7 @@ const Learning = ({ eventList }) => {
       <button className={answerButtonStyle('answerD')}>
         {eventList.answerD}
       </button>
-    </Box>
+      </> 
   );
 };
 export default Learning;
