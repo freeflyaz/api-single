@@ -3,6 +3,8 @@ import LanguageSelector from './LanguageSelector';
 import { Flex, Box, Button, useColorModeValue } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { PiArrowBendUpLeft, PiArrowBendDownRight  } from "react-icons/pi";
+import styles from './Container.module.css';
+
 import '../App.css';
 
 
@@ -86,7 +88,7 @@ const Container = () => {
   
 
   return (
-    <div className="Container">
+    <div className={styles.Container}>
       <Flex justifyContent="center" alignItems="center">
         <Box p="4" >
       <span className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} mr-2`}></span>
@@ -98,13 +100,13 @@ const Container = () => {
       bg={useColorModeValue('white', 'gray.700')}
       p={8}
       maxW="md"
-      borderWidth={1}
+      borderWidth={1} 
       borderRadius={8}
       boxShadow="lg"
       mx="auto"
     >
       <List eventList={eventList} />
-      <div className="nav-bottom">
+      <div className={styles.navBottom}>
       <Button colorScheme="green" onClick={() => prevQuestion()}>Prev</Button>
       {/* <button className="round-button" >
   +
@@ -112,11 +114,11 @@ const Container = () => {
 
 
 
-<button className="round-button" onClick={() => flip()}>
-    <PiArrowBendUpLeft className="arrow-icon arrow-left"/>
-    <div className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} flag-right`}></div>
-    <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} flag-left`}></div>
-    <PiArrowBendDownRight className="arrow-icon arrow-right"/>
+<button className={styles.roundButton} onClick={() => flip()}>
+    <PiArrowBendUpLeft className={styles.arrowLeft}/>
+    <div className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} ${styles.flagRight}`}></div>
+    <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} ${styles.flagLeft}`}></div>
+    <PiArrowBendDownRight className={styles.arrowRight}/>
   </button>
   <Button colorScheme="green" onClick={() => nextQuestion()}>Next</Button>
       </div>

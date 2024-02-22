@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Menu, MenuButton, MenuList, MenuItem, Button } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 // Make sure you import the flag-icon-css library in your project entry file
@@ -57,7 +56,7 @@ const LanguageSelector = ({ onLanguageChange }) => {
       <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
         {/* <span className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} mr-2`}></span>
         {languageLabels[selectedLanguage]} */}
-        Select Mother Tongue
+        Select you mother tongue.
       </MenuButton>
       <MenuList>
         {Object.entries(languageLabels).map(([langCode, label]) => (
