@@ -12,6 +12,8 @@ const Container = () => {
   const [eventList, setEventList] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState('de');
   const [currentQuestionId, setCurrentQuestionId] = useState(1); // Starting with question 1
+  const [ready, setReady] = useState(true);
+  const [resetQuizKey, setResetQuizKey] = useState(0); // Step 1
 
   // const [isFlipped, setIsFlipped] = useState(false);
   const [lastSelectedLanguage, setLastSelectedLanguage] = useState(null); // Track the last selected non-German language
@@ -40,11 +42,15 @@ const Container = () => {
 
   function nextQuestion() {
     setCurrentQuestionId((prevId) => prevId + 1);
+    setReady(true);
+    setResetQuizKey((prevKey) => prevKey + 1); // Step 3
   }
 
-  function prevQuestion() {
-    setCurrentQuestionId((prevId) => prevId - 1);
-  }
+  // function prevQuestion() {
+  //   setCurrentQuestionId((prevId) => prevId - 1);
+  //   setReady(true);
+  //   setResetQuizKey((prevKey) => prevKey - 1); // Step 3
+  // }
 
   const flip = () => {
     //setIsFlipped(!isFlipped);
@@ -105,12 +111,10 @@ const Container = () => {
       boxShadow="lg"
       mx="auto"
     >
-      <ListQuiz eventList={eventList} />
+      <ListQuiz key={resetQuizKey} eventList={eventList} setReady={setReady} />
       <div className={styles.navBottom}>
-      <Button colorScheme="green" onClick={() => prevQuestion()}>Prev</Button>
-      {/* <button className="round-button" >
-  +
-</button> */}
+      {/* <Button colorScheme="green" onClick={() => prevQuestion()} isDisabled={ready}>Prev</Button> */}
+      
 
 
 
@@ -120,7 +124,7 @@ const Container = () => {
     <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} ${styles.flagLeft}`}></div>
     <PiArrowBendDownRight className={styles.arrowRight}/>
   </button>
-  <Button colorScheme="green" onClick={() => nextQuestion()}>Next</Button>
+  <Button colorScheme="green" onClick={() => nextQuestion()} isDisabled={ready}>Next</Button>
       </div>
       </Box>
       

@@ -1,20 +1,28 @@
 import { Button } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const QuizMode = ({ eventList }) => {
+const QuizMode = ({ eventList, setReady }) => {
   // State to manage the styles of each button individually
   const [buttonAStyle, setButtonAStyle] = useState('basic');
   const [buttonBStyle, setButtonBStyle] = useState('basic');
   const [buttonCStyle, setButtonCStyle] = useState('basic');
   const [buttonDStyle, setButtonDStyle] = useState('basic');
   const [correct, setCorrect] = useState(null);
+  const [areButtonsDisabled, setAreButtonsDisabled] = useState(false);
 
   // Style classes
   const basic = 'mt-4 bg-gray-100 hover:bg-gray-200 text-black font-bold py-2 px-4 rounded w-full text-left';
-  const correctStyle = 'mt-4 border-4 border-green-500 bg-gray-100 hover:bg-gray-200 text-black font-bold py-2 px-4 rounded w-full text-left';
-  const wrongStyle = 'mt-4 border-4 border-red-500 bg-gray-100 hover:bg-gray-200 text-black font-bold py-2 px-4 rounded w-full text-left';
+  const correctStyle = 'mt-4 border-4 border-green-500 bg-gray-100  text-black font-bold py-2 px-4 rounded w-full text-left disabled';
+  const wrongStyle = 'mt-4 border-4 border-red-500 bg-gray-100  text-black font-bold py-2 px-4 rounded w-full text-left';
+
+  useEffect(() => {
+    setAreButtonsDisabled(false); // Re-enable buttons on mount
+  }, []); // Empty dependency array means this runs once on mount
+
 
   function checkAnswerHandler(selectedId) {
+    setReady(false);
+    setAreButtonsDisabled(true); 
     // Determine the style for each button based on the selected answer
     const isCorrect = selectedId === eventList.correct;
 
@@ -45,6 +53,7 @@ const QuizMode = ({ eventList }) => {
         id="A"
         className={buttonAStyle === 'basic' ? basic : buttonAStyle}
         onClick={() => checkAnswerHandler('A')}
+        disabled={areButtonsDisabled}
       >
         {eventList.answerA}
       </button>
@@ -52,6 +61,7 @@ const QuizMode = ({ eventList }) => {
         id="B"
         className={buttonBStyle === 'basic' ? basic : buttonBStyle}
         onClick={() => checkAnswerHandler('B')}
+        disabled={areButtonsDisabled}
       >
         {eventList.answerB}
       </button>
@@ -59,6 +69,7 @@ const QuizMode = ({ eventList }) => {
         id="C"
         className={buttonCStyle === 'basic' ? basic : buttonCStyle}
         onClick={() => checkAnswerHandler('C')}
+        disabled={areButtonsDisabled}
       >
         {eventList.answerC}
       </button>
@@ -66,6 +77,7 @@ const QuizMode = ({ eventList }) => {
         id="D"
         className={buttonDStyle === 'basic' ? basic : buttonDStyle}
         onClick={() => checkAnswerHandler('D')}
+        disabled={areButtonsDisabled}
       >
         {eventList.answerD}
       </button>

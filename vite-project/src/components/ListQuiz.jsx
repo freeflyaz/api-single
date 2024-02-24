@@ -1,8 +1,8 @@
 import QuizMode from './quizMode';
 
-const List = ({eventList}) => {
+const List = ({resetQuizKey, eventList, setReady}) => {
   return (
-    <QuizMode eventList={eventList} />
+    <QuizMode key={resetQuizKey} eventList={eventList} setReady={setReady} />
 )
   };
 export default List;
