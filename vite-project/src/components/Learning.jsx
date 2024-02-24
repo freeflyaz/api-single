@@ -2,7 +2,6 @@ import { Box, useColorModeValue, Heading } from '@chakra-ui/react';
 
 const Learning = ({ eventList }) => {
   const correctAnswer = `answer${eventList.correct}`;
-
   // Function to return the style based on whether the answer is correct or not
   const answerButtonStyle = (answerKey) => {
     return answerKey === correctAnswer
