@@ -1,6 +1,6 @@
 import ListQuiz from './ListQuiz';
 import LanguageSelector from './LanguageSelector';
-import { Flex, Box, Button, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Box, Button, useColorModeValue  } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { PiArrowBendUpLeft, PiArrowBendDownRight  } from "react-icons/pi";
 import styles from './Container.module.css';
@@ -14,6 +14,7 @@ const Container = () => {
   const [currentQuestionId, setCurrentQuestionId] = useState(1); // Starting with question 1
   const [ready, setReady] = useState(true);
   const [resetQuizKey, setResetQuizKey] = useState(0); // Step 1
+  
 
   // const [isFlipped, setIsFlipped] = useState(false);
   const [lastSelectedLanguage, setLastSelectedLanguage] = useState(null); // Track the last selected non-German language
@@ -29,6 +30,8 @@ const Container = () => {
 
   useEffect(() => {
     getQuestions();
+    console.log(selectedLanguage);
+   
   }, [selectedLanguage, currentQuestionId]);
 
   const handleLanguageChange = (lang) => {
@@ -118,7 +121,11 @@ const Container = () => {
 
 
 
-<button className={styles.roundButton} onClick={() => flip()}>
+<button 
+className={`${styles.roundButton} ${selectedLanguage === 'de' && selectedFlag === 'de' ? styles.roundButtonDisabled : ''}`}
+ onClick={() => flip()}
+ disabled={selectedLanguage === 'de' && selectedFlag === 'de' ? true : false} 
+>
     <PiArrowBendUpLeft className={styles.arrowLeft}/>
     <div className={`flag-icon flag-icon-${languageFlags[selectedLanguage]} ${styles.flagRight}`}></div>
     <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} ${styles.flagLeft}`}></div>
@@ -126,7 +133,11 @@ const Container = () => {
   </button>
   <Button colorScheme="green" onClick={() => nextQuestion()} isDisabled={ready}>Next</Button>
       </div>
+
+     
       </Box>
+
+
       
 
       <div className="text-center p-6">

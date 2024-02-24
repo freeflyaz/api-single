@@ -73,6 +73,13 @@
         font-size: 20px; 
       transform: translate(-20px, 17px);
     }
+
+    /* Add this to your Container.module.css */
+.roundButtonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
     
     
     /* Additional styles for other elements */
