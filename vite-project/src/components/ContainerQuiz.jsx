@@ -3,6 +3,7 @@ import LanguageSelector from './LanguageSelector';
 import { Flex, Box, Button, useColorModeValue  } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { PiArrowBendUpLeft, PiArrowBendDownRight  } from "react-icons/pi";
+import  ScoreDisplay  from './ScoreDisplay';
 import styles from './Container.module.css';
 
 import '../App.css';
@@ -14,6 +15,9 @@ const Container = () => {
   const [currentQuestionId, setCurrentQuestionId] = useState(1); // Starting with question 1
   const [ready, setReady] = useState(true);
   const [resetQuizKey, setResetQuizKey] = useState(0); // Step 1
+
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0)
   
 
   // const [isFlipped, setIsFlipped] = useState(false);
@@ -34,6 +38,15 @@ const Container = () => {
    
   }, [selectedLanguage, currentQuestionId]);
 
+  const handleAnswerSubmission = (isCorrect) => {
+    if (isCorrect) {
+      setCorrectCount((prev) => prev + 1);
+    } else {
+      setIncorrectCount((prev) => prev + 1);
+    }
+    // Rest of the submission logic
+  };
+
   const handleLanguageChange = (lang) => {
     if (lang !== 'de') {
       setLastSelectedLanguage(lang); // Update the last selected non-German language for flipping
@@ -44,6 +57,7 @@ const Container = () => {
   };
 
   function nextQuestion() {
+    
     setCurrentQuestionId((prevId) => prevId + 1);
     setReady(true);
     setResetQuizKey((prevKey) => prevKey + 1); // Step 3
@@ -114,7 +128,7 @@ const Container = () => {
       boxShadow="lg"
       mx="auto"
     >
-      <ListQuiz key={resetQuizKey} eventList={eventList} setReady={setReady} />
+      <ListQuiz key={resetQuizKey} eventList={eventList} setReady={setReady} handleAnswerSubmission={handleAnswerSubmission} />
       <div className={styles.navBottom}>
       {/* <Button colorScheme="green" onClick={() => prevQuestion()} isDisabled={ready}>Prev</Button> */}
       
@@ -131,6 +145,7 @@ className={`${styles.roundButton} ${selectedLanguage === 'de' && selectedFlag ==
     <div className={`flag-icon flag-icon-${languageFlags[selectedFlag]} ${styles.flagLeft}`}></div>
     <PiArrowBendDownRight className={styles.arrowRight}/>
   </button>
+  <ScoreDisplay correctCount={correctCount} incorrectCount={incorrectCount} />
   <Button colorScheme="green" onClick={() => nextQuestion()} isDisabled={ready}>Next</Button>
       </div>
 
