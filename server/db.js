@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 main().catch(err => console.log(err));
 
   async function main () {
-   await mongoose.connect('mongodb://localhost:27017/SingleDB');
+   await mongoose.connect('mongodb+srv://dbUser:newDbPass@cluster0.knm2nks.mongodb.net/');
   //await mongoose.connect('mongodb+srv://dbUser:newDbPass@cluster0.knm2nks.mongodb.net/SingleDB');
 
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
