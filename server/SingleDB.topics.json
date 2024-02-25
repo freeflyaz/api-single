@@ -1,0 +1,360 @@
+[{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746dfe"
+  },
+  "order": 1,
+  "name": "In Deutschland dürfen Menschen offen etwas gegen die Regierung sagen, weil …",
+  "answerA": "hier Religionsfreiheit gilt.",
+  "answerB": "die Menschen Steuern zahlen.",
+  "answerC": "die Menschen das Wahlrecht haben.",
+  "answerD": "hier Meinungsfreiheit gilt.",
+  "correct": "D"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746dff"
+  },
+  "order": 2,
+  "name": "In Deutschland können Eltern bis zum 14. Lebensjahr ihres Kindes entscheiden, ob es in der Schule am …",
+  "answerA": "Geschichtsunterricht teilnimmt.",
+  "answerB": "Religionsunterricht teilnimmt.",
+  "answerC": "Politikunterricht teilnimmt.",
+  "answerD": "Sprachunterricht teilnimmt.",
+  "correct": "D"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e00"
+  },
+  "order": 3,
+  "name": "Deutschland ist ein Rechtsstaat. Was ist damit gemeint?",
+  "answerA": "Alle Einwohner / Einwohnerinnen und der Staat müssen sich an die Gesetze halten.",
+  "answerB": "Der Staat muss sich nicht an die Gesetze halten.",
+  "answerC": "Nur Deutsche müssen die Gesetze befolgen.",
+  "answerD": "Die Gerichte machen die Gesetze.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e01"
+  },
+  "order": 4,
+  "name": "Welches Recht gehört zu den Grundrechten in Deutschland?",
+  "answerA": "Waffenbesitz",
+  "answerB": "Faustrecht",
+  "answerC": "Meinungsfreiheit",
+  "answerD": "Selbstjustiz",
+  "correct": "B"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e02"
+  },
+  "order": 5,
+  "name": "Wahlen in Deutschland sind frei. Was bedeutet das?",
+  "answerA": "Man darf Geld annehmen, wenn man dafür einen bestimmten Kandidaten / eine bestimmte Kandidatin wählt.",
+  "answerB": "Der Wähler darf bei der Wahl weder beeinflusst noch zu einer bestimmten Stimmabgabe gezwungen werden und keine Nachteile durch die Wahl haben.",
+  "answerC": "Nur Personen, die noch nie im Gefängnis waren, dürfen wählen.",
+  "answerD": "Alle wahlberechtigten Personen müssen wählen.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e03"
+  },
+  "order": 6,
+  "name": "Wie heißt die deutsche Verfassung?",
+  "answerA": "Volksgesetz",
+  "answerB": "Bundesgesetz",
+  "answerC": "Deutsches Gesetz",
+  "answerD": "Grundgesetz",
+  "correct": "C"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e04"
+  },
+  "order": 7,
+  "name": "Welches Recht gehört zu den Grundrechten, die nach der deutschen Verfassung garantiert werden? Das Recht auf …",
+  "answerA": "Glaubens- und Gewissensfreiheit",
+  "answerB": "Unterhaltung",
+  "answerC": "Arbeit",
+  "answerD": "Wohnung",
+  "correct": "D"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e05"
+  },
+  "order": 8,
+  "name": "Was steht nicht im Grundgesetz von Deutschland?",
+  "answerA": "Die Würde des Menschen ist unantastbar.",
+  "answerB": "Alle sollen gleich viel Geld haben.",
+  "answerC": "Jeder Mensch darf seine Meinung sagen.",
+  "answerD": "Alle sind vor dem Gesetz gleich.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e06"
+  },
+  "order": 9,
+  "name": "Welches Grundrecht gilt in Deutschland nur für Ausländer / Ausländerinnen? Das Grundrecht auf …",
+  "answerA": "Schutz der Familie",
+  "answerB": "Menschenwürde",
+  "answerC": "Asyl",
+  "answerD": "Meinungsfreiheit",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e07"
+  },
+  "order": 10,
+  "name": "Was ist mit dem deutschen Grundgesetz vereinbar?",
+  "answerA": "die Prügelstrafe",
+  "answerB": "die Folter",
+  "answerC": "die Todesstrafe",
+  "answerD": "die Geldstrafe",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e08"
+  },
+  "order": 11,
+  "name": "Wie wird die Verfassung der Bundesrepublik Deutschland genannt?",
+  "answerA": "Grundgesetz",
+  "answerB": "Bundesverfassung",
+  "answerC": "Gesetzbuch",
+  "answerD": "Verfassungsvertrag",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e09"
+  },
+  "order": 12,
+  "name": "Eine Partei im Deutschen Bundestag will die Pressefreiheit abschaffen. Ist das möglich?",
+  "answerA": "Ja, wenn mehr als die Hälfte der Abgeordneten im Bundestag dafür sind.",
+  "answerB": "Ja, aber dazu müssen zwei Drittel der Abgeordneten im Bundestag dafür sein.",
+  "answerC": "Nein, denn die Pressefreiheit ist ein Grundrecht. Sie kann nicht abgeschafft werden.",
+  "answerD": "Nein, denn nur der Bundesrat kann die Pressefreiheit abschaffen.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e0a"
+  },
+  "order": 13,
+  "name": "Im Parlament steht der Begriff „Opposition“ für…",
+  "answerA": "die regierenden Parteien.",
+  "answerB": "alle Abgeordneten, die nicht zu der Regierungspartei/den Regierungsparteien gehören.",
+  "answerC": "die Fraktion mit den meisten Abgeordneten.",
+  "answerD": "alle Parteien, die bei der letzten Wahl die 5%-Hürde erreichen konnten.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e0b"
+  },
+  "order": 14,
+  "name": "Meinungsfreiheit in Deutschland heißt, dass ich …",
+  "answerA": "Passanten auf der Straße beschimpfen darf.",
+  "answerB": "meine Meinung in Leserbriefen äußern kann.",
+  "answerC": "Nazi-Symbole tragen darf.",
+  "answerD": "meine Meinung sagen darf, solange ich der Regierung nicht widerspreche.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e0c"
+  },
+  "order": 15,
+  "name": "Was verbietet das deutsche Grundgesetz?",
+  "answerA": "Militärdienst",
+  "answerB": "Zwangsarbeit",
+  "answerC": "freie Berufswahl",
+  "answerD": "Arbeit im Ausland",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e0d"
+  },
+  "order": 16,
+  "name": "Wann ist die Meinungsfreiheit in Deutschland eingeschränkt?",
+  "answerA": "bei der öffentlichen Verbreitung falscher Behauptungen über einzelne Personen",
+  "answerB": "bei Meinungsäußerungen über die Bundesregierung",
+  "answerC": "bei Diskussionen über Religionen",
+  "answerD": "bei Kritik am Staat",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e0e"
+  },
+  "order": 17,
+  "name": "Die deutschen Gesetze verbieten …",
+  "answerA": "Meinungsfreiheit der Einwohner und Einwohnerinnen.",
+  "answerB": "Petitionen der Bürger und Bürgerinnen.",
+  "answerC": "Versammlungsfreiheit der Einwohner und Einwohnerinnen.",
+  "answerD": "Ungleichbehandlung der Bürger und Bürgerinnen durch den Staat.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e0f"
+  },
+  "order": 18,
+  "name": "Welches Grundrecht ist in Artikel 1 des Grundgesetzes der Bundesrepublik Deutschland garantiert?",
+  "answerA": "die Unantastbarkeit der Menschenwürde",
+  "answerB": "das Recht auf Leben",
+  "answerC": "Religionsfreiheit",
+  "answerD": "Meinungsfreiheit",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e10"
+  },
+  "order": 19,
+  "name": "Was versteht man unter dem Recht der „Freizügigkeit“ in Deutschland?",
+  "answerA": "Man darf sich seinen Wohnort selbst aussuchen.",
+  "answerB": "Man kann seinen Beruf wechseln.",
+  "answerC": "Man darf sich für eine andere Religion entscheiden.",
+  "answerD": "Man darf sich in der Öffentlichkeit nur leicht bekleidet bewegen.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e11"
+  },
+  "order": 20,
+  "name": "Eine Partei in Deutschland verfolgt das Ziel, eine Diktatur zu errichten. Sie ist dann …",
+  "answerA": "tolerant.",
+  "answerB": "rechtsstaatlich orientiert.",
+  "answerC": "gesetzestreu.",
+  "answerD": "verfassungswidrig.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e12"
+  },
+  "order": 21,
+  "name": "Welches ist das Wappen der Bundesrepublik Deutschland?\nVier Symbole: 1) einköpfiger Adler auf einem (gelben) Schild. 2) Zwei vereinigte Symbole. 3) stilisiertes Tatzenkreuz. 4) Ährenkranz mit Hammer und Zirkel",
+  "answerA": "1",
+  "answerB": "2",
+  "answerC": "3",
+  "answerD": "4",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e13"
+  },
+  "order": 22,
+  "name": "Was für eine Staatsform hat Deutschland?",
+  "answerA": "Monarchie",
+  "answerB": "Diktatur",
+  "answerC": "Republik",
+  "answerD": "Fürstentum",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e14"
+  },
+  "order": 23,
+  "name": "In Deutschland sind die meisten Erwerbstätigen …",
+  "answerA": "bei einer Firma oder Behörde beschäftigt.",
+  "answerB": "in kleinen Familienunternehmen beschäftigt.",
+  "answerC": "ehrenamtlich für ein Bundesland tätig.",
+  "answerD": "selbständig mit einer eigenen Firma tätig.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e15"
+  },
+  "order": 24,
+  "name": "Wie viele Bundesländer hat die Bundesrepublik Deutschland?",
+  "answerA": "14",
+  "answerB": "15",
+  "answerC": "16",
+  "answerD": "17",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e16"
+  },
+  "order": 25,
+  "name": "Was ist kein Bundesland der Bundesrepublik Deutschland?",
+  "answerA": "Nordrhein-Westfalen",
+  "answerB": "Elsass-Lothringen",
+  "answerC": "Mecklenburg-Vorpommern",
+  "answerD": "Sachsen-Anhalt",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e17"
+  },
+  "order": 26,
+  "name": "Deutschland ist …",
+  "answerA": "eine kommunistische Republik.",
+  "answerB": "ein demokratischer und sozialer Bundesstaat.",
+  "answerC": "eine kapitalistische und soziale Monarchie.",
+  "answerD": "ein sozialer und sozialistischer Bundesstaat.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e18"
+  },
+  "order": 27,
+  "name": "Deutschland ist …",
+  "answerA": "ein sozialistischer Staat.",
+  "answerB": "ein Bundesstaat.",
+  "answerC": "eine Diktatur.",
+  "answerD": "eine Monarchie.",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e19"
+  },
+  "order": 28,
+  "name": "Wer wählt in Deutschland die Abgeordneten zum Bundestag?",
+  "answerA": "das Militär",
+  "answerB": "die Wirtschaft",
+  "answerC": "das wahlberechtigte Volk",
+  "answerD": "die Verwaltung",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e1a"
+  },
+  "order": 29,
+  "name": "Welches Tier ist das Wappentier der Bundesrepublik Deutschland?",
+  "answerA": "Löwe",
+  "answerB": "Adler",
+  "answerC": "Bär",
+  "answerD": "Pferd",
+  "correct": "A"
+},
+{
+  "_id": {
+    "$oid": "65da23ec01eb267f93746e1b"
+  },
+  "order": 30,
+  "name": "Was ist kein Merkmal unserer Demokratie?",
+  "answerA": "regelmäßige Wahlen",
+  "answerB": "Pressezensur",
+  "answerC": "Meinungsfreiheit",
+  "answerD": "verschiedene Parteien",
+  "correct": "A"
+}]

@@ -12,11 +12,11 @@ const QuizMode = ({ eventList, setReady, handleAnswerSubmission }) => {
  
 
   // Style classes
-  const basic = 'mt-4 bg-gray-100 hover:bg-gray-200 text-black font-bold py-2 px-4 rounded w-full text-left';
+  const basic = 'mt-4 bg-gray-100 hover:bg-gray-200 text-black  py-2 px-4 rounded w-full text-left';
   const correctStyle = 'mt-4 border-4 border-green-500 bg-gray-100  text-black font-bold py-2 px-4 rounded w-full text-left disabled';
  const wrongStyle = 'mt-4 border-4 border-red-100 bg-gray-100  text-black  py-2 px-4 rounded w-full text-left';
- const selectedWrongStyle = 'mt-4 border-4 border-red-100 bg-gray-300  font-bold  text-black  py-2 px-4 rounded w-full text-left';
-
+ const selectedWrongStyle = 'mt-4 border-4 border-red-200 bg-gray-200  font-semibold  text-black  py-2 px-4 rounded w-full text-left';
+ 
 //   useEffect(() => {
 //     setAreButtonsDisabled(false); // Re-enable buttons on mount
 //   }, []); // Empty dependency array means this runs once on mount
@@ -53,8 +53,8 @@ const QuizMode = ({ eventList, setReady, handleAnswerSubmission }) => {
 
   return (
     <>
-      <div className='p-4 text-center font-bold' >{correct}</div>
-      <div>{eventList.name}</div>
+      
+      <div className='p-4' >{eventList.name}</div>
       <button
         id="A"
         className={buttonAStyle === 'basic' ? basic : buttonAStyle}
@@ -69,6 +69,7 @@ const QuizMode = ({ eventList, setReady, handleAnswerSubmission }) => {
         onClick={() => checkAnswerHandler('B')}
         disabled={areButtonsDisabled}
       >
+        
         {eventList.answerB}
       </button>
       <button
@@ -77,7 +78,7 @@ const QuizMode = ({ eventList, setReady, handleAnswerSubmission }) => {
         onClick={() => checkAnswerHandler('C')}
         disabled={areButtonsDisabled}
       >
-        {eventList.answerC}
+        {eventList.answerC} 
       </button>
       <button
         id="D"
